@@ -1,0 +1,14 @@
+original_picture_x: 4000
+original_picture_y: 3000
+scaled_picture_x: 1000
+total_pixel_offset_x: 45
+total_pixel_offset_y: 201
+pixels_per_unit: 122
+horizontal_units_x: 4
+horizontal_units_y: 3
+vertical_units_x: 3
+vertical_units_y: 4
+horizontal_columns: [0, 2, 4, 6, 8]
+vertical_columns: [1, 3, 5, 7]
+vertical_column_offset: 1
+horizontal_column_offset: 0

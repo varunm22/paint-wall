@@ -1,5 +1,102 @@
+<!DOCTYPE html>
 <head>
+  <meta charset="utf-8" />
+  <title> Script in head section </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type = "text/javascript">
+    function Popup(title, author, file, description) {
+      $("#painting-title").text(title + " by " + author)
+      $("#painting").attr("src", "paintings/" + file + ".jpg")
+      $("#description").text(description)
+    }
+  </script>
 </head>
 <body>
-<p>asdf</p>
+  <h2>Interactive Paint Wall</h2>
+  <h4>Click on any painting to learn more!</h4>
+  <img src="paint_wall.jpg" alt="paint_wall" usemap="#workmap" width="1000">
+  <map name="workmap">    <area shape="rect" coords="11,50,133,141" onclick="Popup('Incomplete Dinosaur', 'Joshua Segaran', 'josh_dino', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="11,141,133,233" onclick="Popup('Hammock on a Hill', 'Jake Kinney', 'hammock', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="11,233,133,324" onclick="Popup('Winter', 'Yilun Du', 'yilun_winter', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="11,324,133,416" onclick="Popup('Spring', 'Yilun Du', 'yilun_spring', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="11,416,133,507" onclick="Popup('Autumn', 'Yilun Du', 'yilun_autumn', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="11,507,133,599" onclick="Popup('Summer', 'Yilun Du', 'yilun_summer', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="11,599,133,690" onclick="Popup('Mountain', 'Yilun Du', 'yilun_mountain', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="133,80,224,202" onclick="Popup('Blueberry Bear', 'Jake Kinney', 'jake_bear', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="133,202,224,324" onclick="Popup('Moon Lander', 'Mihir Khambete', 'moon', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="133,324,224,446" onclick="Popup('Umbreon', 'Deep Gupta', 'umbreon', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="133,446,224,568" onclick="Popup('Juicebox Night', 'Laura Koemmpel', 'juicebox', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="133,568,224,690" onclick="Popup('Abstract', 'Anya Singhal', 'abstract', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="224,50,346,141" onclick="Popup('Hospital Room', 'Gabe Mintzer', 'hospital', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="224,141,346,233" onclick="Popup('Pancake upon the Floor', 'Michael Kural', 'pancake', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="224,233,346,324" onclick="Popup('Cody on the Couch', 'Maddy Kline', 'cody', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="224,324,346,416" onclick="Popup('Bearded Dragon', 'Varun Mangalick', 'lizard', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="224,416,346,507" onclick="Popup('Blueberry the Betta', 'Varun Mangalick', 'betta', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="224,507,346,599" onclick="Popup('Penguins', 'Varun Mangalick', 'varun_penguins', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="224,599,346,690" onclick="Popup('Rainbow Noodles', 'Varun Mangalick', 'noodles', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="346,80,438,202" onclick="Popup('Penguins', 'Abhijit Mudigonda', 'abhijit_penguins', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="346,202,438,324" onclick="Popup('Geometric Sunset', 'Varun Mangalick', 'sunset', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="346,324,438,446" onclick="Popup('Hollow Stump', 'Varun Mangalick', 'stump', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="346,446,438,568" onclick="Popup('Midnight Owl', 'Varun Mangalick', 'owl', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="346,568,438,690" onclick="Popup('Ostrich', 'Varun Mangalick', 'ostrich', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="438,50,560,141" onclick="Popup('This is Fine', 'Alex Yang', 'fine_meme', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="438,141,560,233" onclick="Popup('Tom', 'Nithin Buduma', 'tom', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="438,233,560,324" onclick="Popup('Glowing Alien Sphere', 'Varun Mangalick', 'sphere', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="438,324,560,416" onclick="Popup('Propaganda Poster of a Plush Dino', 'Varun Mangalick', 'varun_dino', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="438,416,560,507" onclick="Popup('Songbird', 'Kavish Gandhi', 'bird', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="438,507,560,599" onclick="Popup('Japanese Monkey with Stolen Phone', 'Jenn Lu', 'monkey', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="438,599,560,690" onclick="Popup('Midnight Cube', 'Angus MacMullen', 'cube', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="560,80,651,202" onclick="Popup('Blue Flowers', 'Smrithi Raman', 'flowers', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="560,202,651,324" onclick="Popup('Jungle Sunset', 'Avni Singhal', 'avni_sunset', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="560,324,651,446" onclick="Popup('Hummingbird', 'Justina Yang', 'hummingbird', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="560,446,651,568" onclick="Popup('Grunge R2D2', 'Neil Aggarwal', 'r2d2', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="560,568,651,690" onclick="Popup('Portrait of Varun (pixellated for modesty)', 'Jenn Lu', 'pixel_varun', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="651,50,773,141" onclick="Popup('Penguin Collage', 'Jenn Lu', 'penguin_collage', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="651,141,773,233" onclick="Popup('Tree Frog', 'Varun Mangalick', 'frog', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="651,233,773,324" onclick="Popup('Defect from Slay the Spire', 'Rachel Zhang', 'defect', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="651,324,773,416" onclick="Popup('Opossum Screaming at its own Ass', 'Jenn Lu', 'opossum', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="651,416,773,507" onclick="Popup('Ocean in a Drop', 'Varun Mangalick', 'ocean_drop', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="651,507,773,599" onclick="Popup('Water Drops', 'Neha Prasad', 'neha_drops', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="651,599,773,690" onclick="Popup('Autumn', 'Neha Prasad', 'neha_autumn', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="773,80,865,202" onclick="Popup('Penguins', 'Kavish Gandhi', 'kavish_penguins', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="773,202,865,324" onclick="Popup('Lavender', 'Smrithi Raman', 'lavender', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="773,324,865,446" onclick="Popup('Spongebob jellyfish', 'Jasmine Zou', 'jellyfish', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="773,446,865,568" onclick="Popup('Winter Cabin', 'Neha Prasad', 'cabin', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="773,568,865,690" onclick="Popup('Mountain Lake', 'Neha Prasad', 'mountain_lake', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="865,50,987,141" onclick="Popup('Autumn', 'Deep Gupta', 'deep_autumn', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="865,141,987,233" onclick="Popup('Autumn Leaves', 'Varun Mangalick', 'autumn_leaves', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="865,233,987,324" onclick="Popup('Koi Pond', 'Varun Mangalick', 'koi', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="865,324,987,416" onclick="Popup('Fabulous Triceratops', 'Emily Huang', 'triceratops', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="865,416,987,507" onclick="Popup('Flowering Meadow', 'Sanjana Dutt', 'meadow', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="865,507,987,599" onclick="Popup('Cereal', 'Angus MacMullen', 'cereal', '')" data-toggle="modal" data-target="#infoModal">
+    <area shape="rect" coords="865,599,987,690" onclick="Popup('Upon the Water', 'Nova Zhang', 'water_boat', '')" data-toggle="modal" data-target="#infoModal">
+  </map>
+  <!-- Modal -->
+  <div id="infoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="painting-title"></h4>
+        </div>
+        <div class="modal-body">
+          <!-- TODO: have it source an image -->
+          <img id="painting" src="paint_wall.jpg", width="100%">
+          <p id="description"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
+</html> 
