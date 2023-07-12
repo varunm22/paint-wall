@@ -21,13 +21,15 @@ for painting in paintings:
         max_x = int((config["total_pixel_offset_x"] + config["pixels_per_unit"] * (column_offset[painting["column"]] + config["horizontal_units_x"])) * scaling_factor)
         min_y = int((config["total_pixel_offset_y"] + config["pixels_per_unit"] * painting["row"] * config["horizontal_units_y"]) * scaling_factor)
         max_y = int((config["total_pixel_offset_y"] + config["pixels_per_unit"] * (painting["row"]+1) * config["horizontal_units_y"]) * scaling_factor)
+        dir = "H"
     else:
         max_x = int((config["total_pixel_offset_x"] + config["pixels_per_unit"] * (column_offset[painting["column"]] + config["vertical_units_x"])) * scaling_factor)
         min_y = int((config["total_pixel_offset_y"] + config["pixels_per_unit"] * (painting["row"] * config["vertical_units_y"] + config["vertical_column_offset"])) * scaling_factor)
         max_y = int((config["total_pixel_offset_y"] + config["pixels_per_unit"] * ((painting["row"]+1) * config["vertical_units_y"] + config["vertical_column_offset"])) * scaling_factor)
+        dir = "V"
 
-    onclick = f"Popup('{painting['title']}', '{painting['author']}', '{painting['file']}', '{painting['description']}')"
-    total = f'    <area shape="rect" coords="{min_x},{min_y},{max_x},{max_y}" onclick="{onclick}" data-toggle="modal" data-target="#infoModal">\n'
+    onclick = f"Popup('{painting['title']}', '{painting['author']}', '{painting['file']}', '{painting['description']}', '{dir}')"
+    total = f'      <area shape="rect" coords="{min_x},{min_y},{max_x},{max_y}" onclick="{onclick}">\n'
     map_str += total
 
 with open("index.html", "w") as f:
