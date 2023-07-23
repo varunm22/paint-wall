@@ -10,3 +10,9 @@ function Popup(title, author, file, description, dir) {
   }
   $('#infoModal').modal('show');
 }
+function ShowAbout() {
+  $('#aboutModal').modal('show');
+}
+function ShowArtistModal() {
+  $('#artistModal').modal('show');
+}

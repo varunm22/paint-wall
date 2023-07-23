@@ -1,5 +1,6 @@
 import pandas as pd
 import yaml
+from collections import defaultdict
 
 paintings = pd.read_csv("paintings.csv").fillna("").to_dict('records')
 config = yaml.safe_load(open("config.yml", "r").read())
@@ -15,6 +16,7 @@ for column in sorted(config["horizontal_columns"] + config["vertical_columns"]):
     else:
         column_offset_counter += config["vertical_units_x"]
 
+artist_count = defaultdict(int)
 for painting in paintings:
     min_x = int((config["total_pixel_offset_x"] + config["pixels_per_unit"] * column_offset[painting["column"]]) * scaling_factor)
     if painting["column"] in config["horizontal_columns"]:
@@ -28,11 +30,19 @@ for painting in paintings:
         max_y = int((config["total_pixel_offset_y"] + config["pixels_per_unit"] * ((painting["row"]+1) * config["vertical_units_y"] + config["vertical_column_offset"])) * scaling_factor)
         dir = "V"
 
-    onclick = f"Popup('{painting['title']}', '{painting['author']}', '{painting['file']}', '{painting['description']}', '{dir}')"
+    safe_description = painting["description"].replace("'", "\\\'")
+    onclick = f"Popup('{painting['title']}', '{painting['author']}', '{painting['file']}', '{safe_description}', '{dir}')"
     total = f'      <area shape="rect" coords="{min_x},{min_y},{max_x},{max_y}" onclick="{onclick}">\n'
     map_str += total
 
+    artist_count[painting["author"]] += 1
+
+artist_str = ""
+for artist in sorted(artist_count.keys(), key=lambda x: artist_count[x], reverse=True):
+    artist_str += f"            <p><b>{artist}</b>: {artist_count[artist]}</p>"
+
 with open("index.html", "w") as f:
-    f.write(open("html_pre.txt", "r").read())
-    f.write(map_str)
-    f.write(open("html_post.txt", "r").read())
+    html = open("html_template.txt", "r").read()
+    html = html.replace("IMAGEMAPINSERT", map_str)
+    html = html.replace("ARTISTMODALINSERT", artist_str)
+    f.write(html)

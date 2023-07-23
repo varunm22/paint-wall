@@ -8,8 +8,19 @@
   <script src="painting-popup.js"></script>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand">Interactive Paint Wall</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" onclick="ShowAbout()">About</a>
+        <a class="nav-item nav-link" onclick="ShowArtistModal()">Artists</a>
+      </div>
+    </div>
+  </nav>
   <div style="padding: 15px">
-    <h2>Interactive Paint Wall</h2>
     <h4>Click on any painting to learn more!</h4>
     <img src="paint_wall.jpg" alt="paint_wall" usemap="#workmap" width="1000">
     <map name="workmap">
@@ -25,22 +36,22 @@
       <area shape="rect" coords="133,324,224,446" onclick="Popup('Umbreon', 'Deep Gupta', 'umbreon', '', 'V')">
       <area shape="rect" coords="133,446,224,568" onclick="Popup('Juicebox Night', 'Laura Koemmpel', 'juicebox', '', 'V')">
       <area shape="rect" coords="133,568,224,690" onclick="Popup('Abstract', 'Anya Singhal', 'abstract', '', 'V')">
-      <area shape="rect" coords="224,50,346,141" onclick="Popup('Hospital Room', 'Gabe Mintzer', 'hospital', '', 'H')">
+      <area shape="rect" coords="224,50,346,141" onclick="Popup('Hospital Window', 'Gabe Mintzer', 'hospital', 'This is the window that I reached when I visited at the end of my walks with my physical therapist at Spaulding Cambridge—I always liked the view, especially because it came at the end of a successful walk', 'H')">
       <area shape="rect" coords="224,141,346,233" onclick="Popup('Pancake upon the Floor', 'Michael Kural', 'pancake', '', 'H')">
       <area shape="rect" coords="224,233,346,324" onclick="Popup('Cody on the Couch', 'Maddy Kline', 'cody', '', 'H')">
       <area shape="rect" coords="224,324,346,416" onclick="Popup('Bearded Dragon', 'Varun Mangalick', 'lizard', 'This is my attempt at making a reasonably realistic lizard. I found that adding little dots gave a good impression of scales!', 'H')">
-      <area shape="rect" coords="224,416,346,507" onclick="Popup('Blueberry the Betta', 'Varun Mangalick', 'betta', '', 'H')">
-      <area shape="rect" coords="224,507,346,599" onclick="Popup('Penguins', 'Varun Mangalick', 'varun_penguins', '', 'H')">
-      <area shape="rect" coords="224,599,346,690" onclick="Popup('Rainbow Noodles', 'Varun Mangalick', 'noodles', '', 'H')">
+      <area shape="rect" coords="224,416,346,507" onclick="Popup('Blueberry the Betta', 'Varun Mangalick', 'betta', 'I painted this based on a picture I took of Blueberry the Betta angrily investigating a snail', 'H')">
+      <area shape="rect" coords="224,507,346,599" onclick="Popup('Penguins', 'Varun Mangalick', 'varun_penguins', 'This was from our first paint night where three of us painted penguin paintings, and Josh started a dinosaur painting. The hard part was making the snow have shadows and peaks even though it\'s all supposed to be the same color.', 'H')">
+      <area shape="rect" coords="224,599,346,690" onclick="Popup('Rainbow Noodles', 'Varun Mangalick', 'noodles', 'I wanted to experiment with shading, and I thought this would be a fun way to explore it in lots of different colors! The most challenging part was the self intersecting blue noodle because I wanted the two different parts of the blue noodle to look distinct.', 'H')">
       <area shape="rect" coords="346,80,438,202" onclick="Popup('Penguins', 'Abhijit Mudigonda', 'abhijit_penguins', '', 'V')">
-      <area shape="rect" coords="346,202,438,324" onclick="Popup('Geometric Sunset', 'Varun Mangalick', 'sunset', '', 'V')">
-      <area shape="rect" coords="346,324,438,446" onclick="Popup('Hollow Stump', 'Varun Mangalick', 'stump', '', 'V')">
-      <area shape="rect" coords="346,446,438,568" onclick="Popup('Midnight Owl', 'Varun Mangalick', 'owl', '', 'V')">
-      <area shape="rect" coords="346,568,438,690" onclick="Popup('Ostrich', 'Varun Mangalick', 'ostrich', '', 'V')">
+      <area shape="rect" coords="346,202,438,324" onclick="Popup('Geometric Sunset', 'Varun Mangalick', 'sunset', 'I started by making the sky and sun in a geometric fashion, then realized I didn\'t have a great idea what to do with the waves. My mental image was somewhat more like The Great Wave off Kanagawa, but my execution was lacking. I was disappointed in the waves when I first finished, but with some distance, I came to like the final product', 'V')">
+      <area shape="rect" coords="346,324,438,446" onclick="Popup('Hollow Stump', 'Varun Mangalick', 'stump', 'During a hike, I saw several beautiful and cozy looking tree stumps, some with puddles or mushrooms. I wanted to make my own version with all my favorite stump sights all together in one. This was one of the few paintings I had done at this point where there was no pictoral example, so I had to think a bit about how to compose the various elements in the stump.', 'V')">
+      <area shape="rect" coords="346,446,438,568" onclick="Popup('Midnight Owl', 'Varun Mangalick', 'owl', 'My hope for this painting was to give the sense of an owl at night. To do so, I made the background and even the owl\'s body/feathers very dark and low contrast, but made the eyes particularly bright in contrast. My hope was that at a distance, all that was visible were two eyes glowing in the night, but up close, you could make out the rest of the scene.', 'V')">
+      <area shape="rect" coords="346,568,438,690" onclick="Popup('Ostrich', 'Varun Mangalick', 'ostrich', 'No elaboration needed', 'V')">
       <area shape="rect" coords="438,50,560,141" onclick="Popup('This is Fine', 'Alex Yang', 'fine_meme', '', 'H')">
       <area shape="rect" coords="438,141,560,233" onclick="Popup('Tom', 'Nithin Buduma', 'tom', '', 'H')">
-      <area shape="rect" coords="438,233,560,324" onclick="Popup('Glowing Alien Sphere', 'Varun Mangalick', 'sphere', '', 'H')">
-      <area shape="rect" coords="438,324,560,416" onclick="Popup('Propaganda Poster of a Plush Dino', 'Varun Mangalick', 'varun_dino', '', 'H')">
+      <area shape="rect" coords="438,233,560,324" onclick="Popup('Glowing Alien Sphere', 'Varun Mangalick', 'sphere', 'When painting this, I mainly wanted to experiment with a variety of textures, so I made the sky simple and abstract, but added clouds to give it a sense of scale. I added a sphere to the center and tried to make it glow via a red tinge around it and shadows on the buildings below. My hope was that it looked like some desolate alien landscape with a hint of civilization.', 'H')">
+      <area shape="rect" coords="438,324,560,416" onclick="Popup('Propaganda Poster of a Plush Dino', 'Varun Mangalick', 'varun_dino', 'This is one of my two favorite paintings that I\'ve done on this wall. I hadn’t actually done any dinosaur paintings on this paint wall, so I thought I might as well revisit the old favorite subject. I tried to make the dinosaur fuzzy and 3d to contrast from the bright and flat colors in the background. By making it have propaganda poster vibe, I hoped to elevate the dinosaur as a subject!', 'H')">
       <area shape="rect" coords="438,416,560,507" onclick="Popup('Songbird', 'Kavish Gandhi', 'bird', '', 'H')">
       <area shape="rect" coords="438,507,560,599" onclick="Popup('Japanese Monkey with Stolen Phone', 'Jenn Lu', 'monkey', '', 'H')">
       <area shape="rect" coords="438,599,560,690" onclick="Popup('Midnight Cube', 'Angus MacMullen', 'cube', '', 'H')">
@@ -50,24 +61,25 @@
       <area shape="rect" coords="560,446,651,568" onclick="Popup('Grunge R2D2', 'Neil Aggarwal', 'r2d2', '', 'V')">
       <area shape="rect" coords="560,568,651,690" onclick="Popup('Portrait of Varun (pixellated for modesty)', 'Jenn Lu', 'pixel_varun', '', 'V')">
       <area shape="rect" coords="651,50,773,141" onclick="Popup('Penguin Collage', 'Jenn Lu', 'penguin_collage', '', 'H')">
-      <area shape="rect" coords="651,141,773,233" onclick="Popup('Tree Frog', 'Varun Mangalick', 'frog', '', 'H')">
-      <area shape="rect" coords="651,233,773,324" onclick="Popup('Defect from Slay the Spire', 'Rachel Zhang', 'defect', '', 'H')">
+      <area shape="rect" coords="651,141,773,233" onclick="Popup('Tree Frog', 'Varun Mangalick', 'frog', 'This painting is based on a picture of a tree frog sourced from the Chromecast wallpaper site', 'H')">
+      <area shape="rect" coords="651,233,773,324" onclick="Popup('Defect from Slay the Spire', 'Rachel Zhang', 'defect', 'I am possibly way too addicted to this game.', 'H')">
       <area shape="rect" coords="651,324,773,416" onclick="Popup('Opossum Screaming at its own Ass', 'Jenn Lu', 'opossum', '', 'H')">
-      <area shape="rect" coords="651,416,773,507" onclick="Popup('Ocean in a Drop', 'Varun Mangalick', 'ocean_drop', '', 'H')">
-      <area shape="rect" coords="651,507,773,599" onclick="Popup('Water Drops', 'Neha Prasad', 'neha_drops', '', 'H')">
-      <area shape="rect" coords="651,599,773,690" onclick="Popup('Autumn', 'Neha Prasad', 'neha_autumn', '', 'H')">
+      <area shape="rect" coords="651,416,773,507" onclick="Popup('Ocean in a Drop', 'Varun Mangalick', 'ocean_drop', 'This is one of my two favorite paintings that I\'ve done on this wall. I started by following a tutorial to paint a realistic water drop, then added my own touch of a whale and school of fish. I found the shadows were surprisingly effective in increasing the sense of realism. ', 'H')">
+      <area shape="rect" coords="651,507,773,599" onclick="Popup('Water Drops', 'Neha Prasad', 'neha_drops', 'This is my first attempt at painting water drops. I followed a video tutorial but still found the technique quite challenging.  ', 'H')">
+      <area shape="rect" coords="651,599,773,690" onclick="Popup('Autumn', 'Neha Prasad', 'neha_autumn', 'For this paint night, I followed a video tutorial for an autumn scene with Yilun and Deep! This is my first painting on the wall, completed way back in spring 2021.', 'H')">
       <area shape="rect" coords="773,80,865,202" onclick="Popup('Penguins', 'Kavish Gandhi', 'kavish_penguins', '', 'V')">
       <area shape="rect" coords="773,202,865,324" onclick="Popup('Lavender', 'Smrithi Raman', 'lavender', '', 'V')">
       <area shape="rect" coords="773,324,865,446" onclick="Popup('Spongebob jellyfish', 'Jasmine Zou', 'jellyfish', '', 'V')">
-      <area shape="rect" coords="773,446,865,568" onclick="Popup('Winter Cabin', 'Neha Prasad', 'cabin', '', 'V')">
-      <area shape="rect" coords="773,568,865,690" onclick="Popup('Mountain Lake', 'Neha Prasad', 'mountain_lake', '', 'V')">
+      <area shape="rect" coords="773,446,865,568" onclick="Popup('Winter Cabin', 'Neha Prasad', 'cabin', 'I followed one of those classic 10 minute painting tutorials on a cozy winter night in Boston. ', 'V')">
+      <area shape="rect" coords="773,568,865,690" onclick="Popup('Mountain Lake', 'Neha Prasad', 'mountain_lake', 'This is my first attempt at watercolors. I had to restart this one since I didn\'t use enough water to mix the paint at first. ', 'V')">
       <area shape="rect" coords="865,50,987,141" onclick="Popup('Autumn', 'Deep Gupta', 'deep_autumn', '', 'H')">
-      <area shape="rect" coords="865,141,987,233" onclick="Popup('Autumn Leaves', 'Varun Mangalick', 'autumn_leaves', '', 'H')">
-      <area shape="rect" coords="865,233,987,324" onclick="Popup('Koi Pond', 'Varun Mangalick', 'koi', '', 'H')">
+      <area shape="rect" coords="865,141,987,233" onclick="Popup('Autumn Leaves', 'Varun Mangalick', 'autumn_leaves', 'For this paint night, three people followed a video teaching them to paint an autumn scene. I wanted to be contrarian, but still stick with the theme of autumn, so I decided to paint leaves. It was somewhat challenging to paint a variety of realistic looking leaves, especially if they\'re curved vs flat, and I tried my best to look up examples in doing so. As a fun challenge for you, see if you can find the three matching paintings that the others did!', 'H')">
+      <area shape="rect" coords="865,233,987,324" onclick="Popup('Koi Pond', 'Varun Mangalick', 'koi', 'This was the first proper painting I did with water colors (in contrast to acrylic). I was very happy with how the koi themselves turned out, but the water came out very splotchy. In addition, I actually had sketched a third koi, but accidentally painted over part of it with the blue. Unlike acrylic, once you\'ve put down paint, you dan\'t always correct it!', 'H')">
       <area shape="rect" coords="865,324,987,416" onclick="Popup('Fabulous Triceratops', 'Emily Huang', 'triceratops', '', 'H')">
       <area shape="rect" coords="865,416,987,507" onclick="Popup('Flowering Meadow', 'Sanjana Dutt', 'meadow', '', 'H')">
       <area shape="rect" coords="865,507,987,599" onclick="Popup('Cereal', 'Angus MacMullen', 'cereal', '', 'H')">
       <area shape="rect" coords="865,599,987,690" onclick="Popup('Upon the Water', 'Nova Zhang', 'water_boat', '', 'H')">
+
     </map>
     <!-- Modal -->
     <div id="infoModal" class="modal fade" role="dialog" tabindex='-1'>
@@ -78,6 +90,28 @@
             <h3 id="painting-title"></h3>
             <h5 id="painting-author"></h5>
             <p id="painting-description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="aboutModal" class="modal fade" role="dialog" tabindex='-1'>
+      <div class="modal-dialog" id="modal-dia">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Starting in January 2022, I made a paint wall through a bunch of paint nights with friends, and you can read more about that <a href="https://varunm22.github.io/hobbies/painting/post-3-paint-wall/">here</a>. Whenever I've shown people the picture of the whole wall, they've always immediately zoomed in, trying to look closer at individual paintings, but the resolution of each painting is never great.</p>
+            <p>Given that I have nice pictures of each individual painting (taken before putting on the wall), I've always wanted to build out an interactive version of the paint wall where you can click on paintings in the overall picture and see a larger version of the painting along with info like who painted it and any notes they may have had.</p>
+            <p>Overall, the implementation was pretty straightforward using HTML Image Maps. However, I didn't really want to manually define all of the corners of the individual paintings. Since the paintings are arranged in a fairly regular grid, I was able to write a python script to autogenerate the image map. This uses various defined constaints such as the pixel offsets of the painting grid corners from the corners of the image itself or even which column indices are horizontal or vertical. Check out the source code <a href="https://github.com/varunm22/paint-wall">here</a>.</p>
+            <p>I am still planning on adding features to this project, potentially including some way to see all paintings for a given artist.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="artistModal" class="modal fade" role="dialog" tabindex='-1'>
+      <div class="modal-dialog" id="modal-dia">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3>Number of paintings per artist</h3>
+            <p><b>Varun Mangalick</b>: 14</p>            <p><b>Yilun Du</b>: 5</p>            <p><b>Jenn Lu</b>: 4</p>            <p><b>Neha Prasad</b>: 4</p>            <p><b>Jake Kinney</b>: 2</p>            <p><b>Deep Gupta</b>: 2</p>            <p><b>Kavish Gandhi</b>: 2</p>            <p><b>Angus MacMullen</b>: 2</p>            <p><b>Smrithi Raman</b>: 2</p>            <p><b>Joshua Segaran</b>: 1</p>            <p><b>Mihir Khambete</b>: 1</p>            <p><b>Laura Koemmpel</b>: 1</p>            <p><b>Anya Singhal</b>: 1</p>            <p><b>Gabe Mintzer</b>: 1</p>            <p><b>Michael Kural</b>: 1</p>            <p><b>Maddy Kline</b>: 1</p>            <p><b>Abhijit Mudigonda</b>: 1</p>            <p><b>Alex Yang</b>: 1</p>            <p><b>Nithin Buduma</b>: 1</p>            <p><b>Avni Singhal</b>: 1</p>            <p><b>Justina Yang</b>: 1</p>            <p><b>Neil Aggarwal</b>: 1</p>            <p><b>Rachel Zhang</b>: 1</p>            <p><b>Jasmine Zou</b>: 1</p>            <p><b>Emily Huang</b>: 1</p>            <p><b>Sanjana Dutt</b>: 1</p>            <p><b>Nova Zhang</b>: 1</p>
           </div>
         </div>
       </div>
